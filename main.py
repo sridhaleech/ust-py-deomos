@@ -1,5 +1,8 @@
-def add(a, b):
-    return a + b
-
-print(add(200, 20))
-print("Task has been Completed..")
+import numpy as np
+import pandas as pd
+numbers = np.array([10, 20, 30, 40, 50])
+df = pd.DataFrame({
+    "numbers": numbers
+})
+print(df)
+print("Mean:", df["numbers"].mean())
