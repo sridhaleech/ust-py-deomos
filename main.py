@@ -1,8 +1,17 @@
-import numpy as np
 import pandas as pd
-numbers = np.array([10, 20, 30, 40, 50])
-df = pd.DataFrame({
-    "numbers": numbers
-})
+
+# Read CSV file
+df = pd.read_csv("data.csv")
+
+print("Data:")
 print(df)
-print("Mean:", df["numbers"].mean())
+
+# Statistics for numeric columns
+print("\nMean:")
+print(df.mean(numeric_only=True))
+
+print("\nMedian:")
+print(df.median(numeric_only=True))
+
+print("\nMode:")
+print(df.mode().iloc[0])
